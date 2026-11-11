@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DevOps Journey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="glow"></div>
+
+  <header>
+    <span class="badge" id="env-badge">● local</span>
+    <h1>DevOps <span class="accent">Journey</span></h1>
+    <p class="subtitle">by <span id="owner">Prajwal</span> · from zero to production</p>
+  </header>
+
+  <main>
+    <section class="card progress-card">
+      <div class="ring" id="ring">
+        <svg viewBox="0 0 120 120">
+          <circle class="ring-bg" cx="60" cy="60" r="52" />
+          <circle class="ring-fg" id="ring-fg" cx="60" cy="60" r="52" />
+        </svg>
+        <div class="ring-label"><span id="percent">0</span>%</div>
+      </div>
+      <div>
+        <h2>Roadmap progress</h2>
+        <p class="muted">Update <code>src/data.js</code>, push, and watch your pipeline ship it.</p>
+      </div>
+    </section>
+
+    <section class="pipeline">
+      <h2>The pipeline you'll build</h2>
+      <div class="stages">
+        <div class="stage"><span>📥</span>Checkout</div>
+        <div class="arrow">→</div>
+        <div class="stage"><span>🧹</span>Lint</div>
+        <div class="arrow">→</div>
+        <div class="stage"><span>🧪</span>Test</div>
+        <div class="arrow">→</div>
+        <div class="stage"><span>🐳</span>Build</div>
+        <div class="arrow">→</div>
+        <div class="stage"><span>🚀</span>Deploy</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Milestones</h2>
+      <ul class="milestones" id="milestones"></ul>
+    </section>
+
+    <section class="card quote-card">
+      <p id="quote">Loading wisdom…</p>
+      <button id="new-quote">New quote ↻</button>
+    </section>
+  </main>
+
+  <footer class="terminal">
+    <span class="prompt">$</span> version <b id="version">–</b>
+    <span class="sep">|</span> commit <b id="commit">–</b>
+    <span class="sep">|</span> health <b id="health">checking…</b>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
